@@ -4,6 +4,12 @@ import os
 path_comprimir = "C:/Users/ameri/Downloads/"
 
 def comprime(path_folder, file_name):
+    """Esta función comprime una imagen y la guarda en la misma carpeta donde se ubica
+
+    Args:
+        path_folder (str): Carpeta de ubicación de las imagenes
+        file_name (str): Nombre de la imagen a comprimir
+    """
     picture = Image.open(path_folder + file_name)
     picture.save(path_folder+'compressed_'+file_name,optimize=True,quality=60)
     os.remove(path_folder+file_name)
